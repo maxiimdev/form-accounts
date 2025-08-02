@@ -10,8 +10,7 @@ import 'primeicons/primeicons.css'
 import InputText from 'primevue/inputtext'
 import Select from 'primevue/select'
 import Button from 'primevue/button'
-import Password from 'primevue/password';
-
+import Password from 'primevue/password'
 
 const app = createApp(App)
 
@@ -28,7 +27,5 @@ app.component('ButtonComponent', Button)
 app.component('InputText', InputText)
 app.component('SelectComponent', Select)
 app.component('PasswordComponent', Password)
-
-
 
 app.mount('#app')
