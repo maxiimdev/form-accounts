@@ -5,7 +5,7 @@ export interface Tag {
 export interface Account {
   id: string;
   labels: Tag[];
-  labelsInput: string; // Временное поле для ввода меток
+  labelsInput: string;
   type: 'LDAP' | 'Локальная' | null;
   login: string;
   password: string | null;

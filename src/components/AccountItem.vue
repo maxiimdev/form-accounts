@@ -100,7 +100,7 @@ const parseAndValidateLabels = () => {
         @click="showPassword = !showPassword"
       />
     </div>
-    <div class="px-2 flex justify-end">
+    <div class="px-2">
       <ButtonComponent
         @click="emit('remove', localAccount.id)"
         label=""
