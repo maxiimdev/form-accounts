@@ -1,12 +1,31 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import { ref } from 'vue';
+import { defineStore } from 'pinia';
+import { type Account } from '../types/account';
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
+export const useAccountStore = defineStore('accounts', () => {
+  const accounts = ref<Account[]>([]);
 
-  return { count, doubleCount, increment }
-})
+  const addAccount = (account: Account) => {
+    accounts.value.push(account);
+  };
+
+  const removeAccount = (id: string) => {
+    accounts.value = accounts.value.filter((acc) => acc.id !== id);
+  };
+
+  const updateAccount = (updatedAccount: Account) => {
+    const index = accounts.value.findIndex((acc) => acc.id === updatedAccount.id);
+    if (index !== -1) {
+      accounts.value[index] = updatedAccount;
+    }
+  };
+
+  return {
+    accounts,
+    addAccount,
+    removeAccount,
+    updateAccount,
+  };
+}, {
+  persist: true,
+});
