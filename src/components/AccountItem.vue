@@ -47,6 +47,7 @@ const parseAndValidateLabels = () => {
     .filter(Boolean)
     .map((text) => ({ text }))
   localAccount.value.labels = tags
+  validateAndSave()
 
   console.log(localAccount.value.labels)
 }
