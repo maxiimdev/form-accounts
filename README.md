@@ -1,40 +1,29 @@
-# form-accounts
+# Account Form Mini-Project
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple Vue 3 application for managing account records with a form, featuring input validation, tag parsing, password visibility toggle, and persistent storage using Pinia. Built with TypeScript, PrimeVue, and Tailwind CSS.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+-- Add/Remove Accounts: Create and delete account entries.
 
-## Type Support for `.vue` Imports in TS
+-- Form Validation: Validates Tags, Type, Login, and Password (required for "Local" type).
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+-- Tag Parsing: Converts semicolon-separated input (tag1;tag2) into a list of tags.
 
-## Customize configuration
+-- Password Toggle: Eye icon to show/hide password for "Local" accounts.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+-- Persistent Storage: Saves data to localStorage using Pinia.
 
-## Project Setup
+## Tech Stack
 
-```sh
-npm install
-```
+-- Vue 3: Composition API for reactive components.
 
-### Compile and Hot-Reload for Development
+-- TypeScript: Type-safe code.
 
-```sh
-npm run dev
-```
+-- Pinia: State management with persistence.
 
-### Type-Check, Compile and Minify for Production
+-- PrimeVue: UI components (InputText, Select, Button).
 
-```sh
-npm run build
-```
+-- Tailwind CSS: Utility-first styling.
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-# form-accounts
+-- Vite: Fast build tool and dev server.
